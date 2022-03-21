@@ -536,6 +536,87 @@ console.log("hello world")
 
 
 
+// Callback Functions
+
+
+
+const countries = ["Nigeria", "America", "Australia", "Canada", "Finland", "France"]
+
+
+// countries.forEach(function(country){
+//     console.log(country)
+// })
+
+
+function addCountry(country, callback){
+    setTimeout(function(){
+        countries.push(country);
+
+        callback()
+    },3000)
+}
+
+function displayCountries(){
+    setTimeout(function(){
+        let html = ""
+        countries.forEach(function(country){
+            html += `<li>${country}</li>`
+
+        }); document.body.innerHTML = html
+    }, 1000)
+}
+
+
+displayCountries()
+addCountry("Algeria", displayCountries)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function addCountry(country, callback){
+//     setTimeout(function(){
+//         countries.push(country);
+//         callback()
+//     }, 4000);
+// }
+
+// function displayCountries(){
+//     setTimeout(function(){
+//         let html = ""
+//         countries.forEach(function(country){
+//             html += `<li>${country}</li>`
+//         }); document.querySelector(".html").innerHTML = html
+//     }, 1000);
+// }
+
+
+// addCountry("Cuba", displayCountries)
+
+
+
 
 
 
