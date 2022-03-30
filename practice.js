@@ -567,8 +567,14 @@ function displayCountries(){
 }
 
 
-displayCountries()
-addCountry("Algeria", displayCountries)
+// displayCountries()
+// addCountry("Algeria", displayCountries)
+
+
+var date = new Date()
+var todaysDate = date.getDate()
+
+console.log(todaysDate)
 
 
 
